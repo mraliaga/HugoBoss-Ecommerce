@@ -1,28 +1,26 @@
 /* Google Fonts */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@400;700&display=swap");
-
-/* Css Reset */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  list-style: none;
 }
 
-/* Css Tanimlamalar */
+/* Css Tanımlamalar */
 :root {
-  --main-color: #ffffffe3;
+  --main-color: #000000;
   --text-color: #000;
-  --dg-color: #fff;
+  --bg-color: #fff;
   --container-color: #1e1e2a;
-  --header-color: #b32323;
+  --header-color: rgb(169, 43, 43);
 }
 
-Body {
+body {
   font-family: "Big Shoulders Text", sans-serif;
-  background-color: var(--dg-color);
+  background-color: var(--bg-color);
   color: var(--text-color);
 }
 
@@ -31,8 +29,7 @@ Body {
   width: 100%;
   margin: auto;
 }
-
-/* Header */
+/*  * Header */
 
 header {
   position: fixed;
@@ -47,9 +44,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 0;
+  padding: 25px 0;
 }
-
 #menu-icon {
   font-size: 28px;
   color: var(--main-color);
@@ -58,120 +54,170 @@ header {
 }
 
 .logo {
-  font-size: 24px;
-  color: var(--main-color);
+  font-size: 1.3em; /* Logoyu büyüt */
+  font-weight: bold;
 }
 
+.hugo {
+  background-color: rgb(177, 32, 32);
+  color: white;
+  padding: 5px 10px;
+}
+
+.boss {
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+}
 .navbar {
   display: flex;
   align-items: center;
-  column-gap: 106px;
+  column-gap: 86px;
 }
 
 .nav-link {
-  color: var(--main-color);
+  color: white;
   font-size: 17px;
   font-weight: 700;
 }
 
 #cart-icon {
   font-size: 29px;
-  color: var(--main-color);
+  color: #fff;
   cursor: pointer;
   position: relative;
 }
 
 .bxs-shopping-bag {
   position: relative;
-  font-size: 29px;
 }
-
-/* Htmlde data-quatity attribue une erisip stillendirdik */
 .bxs-shopping-bag::after {
+  /* Html'de data-quantity attribute üne erişip stillendirdik. */
   content: attr(data-quantity);
   position: absolute;
   top: 0;
   right: -11px;
-  background-color: var(--main-color);
+  background-color: #fff;
+  color: black;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  color: black;
   display: flex;
-  justify-content: center;
+  align-items: center;
   justify-content: center;
   font-size: 13px;
   font-weight: 500;
 }
+/* Footer */
+footer {
+  background-color: var(--main-color);
+  margin-top: 50px;
+  padding: 40px 10px;
+}
+.footer-c {
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+  gap: 16px;
+}
 
-/*  Home */
+.footer-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-box h2 {
+  font-size: 128px;
+  color: var(--bg-color);
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+.social i {
+  background-color: var(--bg-color);
+  font-size: 20px;
+  padding: 10px;
+  color: var(--main-color);
+  border-radius: 50%;
+}
+.footer-box h3 {
+  color: var(--bg-color);
+}
+.footer-box a {
+  color: var(--bg-color);
+  padding-top: 30px;
+}
+.copyright {
+  color: var(--bg-color);
+  padding-top: 30px;
+}
+
+/* ! AnaSayfa */
+
+/* * Home */
 .home {
   position: relative;
   background-color: var(--header-color);
-  min-height: 400px;
+  min-height: 700px;
 }
 
 .home-img {
-  width: 100%;
-  top: 15%;
   position: absolute;
-  max-width: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
   display: flex;
   justify-content: center;
+  min-height: auto;
+  background-size: 100%;
 }
-
 .home-img img {
-  width: 100%;
-  max-width: 100%;
-  display: block;
-  height: auto;
+  width: 150%;
+  max-height: 730px;
 }
-
 .home-img::before {
-  content: "A New Era \A of Style"; /* \A ile satır başı ekle */
-
+  left: -150px; /* Yazıyı sola kaydırır. Değeri ihtiyacınıza göre ayarlayın */
+  text-align: left; /* Yazıyı sola hizalar */
+  line-height: 1.2;
+  content: "A NEW ERA \A OF STYLE";
+  white-space: pre;
+  word-break: break-word;
   text-transform: uppercase;
-  color: #b32323;
-  font-size: 105px;
-  font-weight: bold;
+  font-size: 100px;
   position: absolute;
-  top: -28px; /* Top pozisyonu için px birim ekleyin */
-  margin-top: 15%;
-  margin-right: 50%;
-  margin-bottom: 100%;
-  white-space: pre; /* Satır başı karakterinin işlevini aktif hale getirir */
+  top: 40%;
+  color: rgb(182, 28, 28);
+  font-weight: 900;
 }
 
 /* Products */
 .heading {
-  margin-left: 180px;
-  font-size: 105px;
-  font-weight: 1100;
-  margin-top: 400px;
-  color: #b32323;
+  text-align: center;
+  font-size: 64px;
+  font-weight: 900;
+  margin-top: 20px;
 }
-
 .product-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   margin-top: 32px;
 }
-
 .product-img {
   width: 100%;
   height: 350px;
   object-fit: cover;
 }
-
 .product-info {
   display: flex;
   flex-direction: column;
 }
-
 .product-title {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 800;
   color: var(--text-color);
   margin: 12px 0 8px;
 }
@@ -179,12 +225,11 @@ header {
 .product-price {
   font-size: 19px;
   font-weight: 400;
-  color: #b32323;
+  color: rgb(190, 27, 27);
 }
-
 .add-to-cart {
-  background-color: #b32323;
-  color: var(--dg-color);
+  background-color: rgb(190, 27, 27);
+  color: var(--bg-color);
   font-weight: 600;
   padding: 10px;
   text-align: center;
@@ -194,38 +239,149 @@ header {
   border: none;
   outline: none;
 }
-/* Responsive Design */
+
+/* ! Cart Sayfası */
+.cart-container {
+  margin-top: 115px !important;
+}
+
+.back-to-home {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+}
+.back-to-home i {
+  font-size: 24px;
+}
+.back-to-home span {
+  font-size: 16px;
+  font-weight: 600;
+}
+.shopping-cart {
+  margin-top: 32px;
+}
+.cart-box {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  margin-top: 40px;
+  gap: 16px;
+}
+
+#cartItems {
+  display: grid;
+  row-gap: 16px;
+}
+.cart-item {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr 0.5fr;
+  align-items: center;
+
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(227, 227, 227);
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cart-item-title {
+  font-size: 25px;
+}
+
+.cart-item-quantity {
+  border: 1px solid var(--text-color);
+  outline: none;
+  width: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.cart-item-price {
+  font-size: 18px;
+}
+.remove-from-cart {
+  max-width: 80px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  padding: 8px;
+  background-color: crimson;
+  color: var(--bg-color);
+  cursor: pointer;
+}
+.cart-t {
+  display: flex;
+  flex-direction: column;
+}
+#cartTotal {
+  font-size: 32px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.checkout-btn {
+  margin-top: 32px;
+  background-color: var(--main-color);
+  padding: 10px;
+  color: var(--bg-color);
+  max-width: 150px;
+  font-weight: 600;
+  letter-spacing: 1.7;
+  text-align: center;
+}
+/* Responsive Tasarım */
 
 @media (max-width: 1200px) {
   .container {
     width: 90%;
     margin: 0 auto;
   }
-  .home {
-    min-width: 1250px;
-  }
   .home-img::before {
-    top: -35;
-  }
-  .home-img {
-    font-size: 70px;
+    top: -35px;
+    font-size: 128px;
   }
   .product-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 @media (max-width: 910px) {
   .nav {
     padding: 18px 0;
   }
   .home-img::before {
+    font-size: 96px;
+    top: -35px;
+  }
+  .home-img img {
+    width: 100%;
   }
 }
-
-@media (max-width: 850px) {
+@media (max-width: 720px) {
+  .home {
+    min-width: 620px;
+  }
+  .home-img::before {
+    font-size: 80px;
+    top: -40px;
+  }
+  .cart-box {
+    grid-template-columns: 1fr;
+  }
+  .footer-c {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 550px) {
+  .home {
+    min-width: 520px;
+  }
   #menu-icon {
-    display: initial; /* ? none ile ayni */
+    display: initial;
   }
   .navbar {
     position: absolute;
@@ -242,7 +398,7 @@ header {
     clip-path: circle(0% at 0% 0%);
     transition: all 0.5s;
   }
-  /* Clipt-path html elemanlarinin belirli kisimlarini gorunur kilmak icin kullanilir  */
+  /* Clipt-path ==> Html elemanlarının belirli kısımlarını görünür kılmak için kullanılır. */
   .nav-link {
     display: block;
     padding: 15px;
@@ -250,17 +406,7 @@ header {
   .navbar.open-menu {
     clip-path: circle(144% at 0% 0%);
   }
-}
-
-@media (max-width: 750px) {
-  .home-img::before {
-    font-size: 90px !important; /* 750px'den küçük ekranlarda font-boyutunu küçült */
-  }
   .product-container {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .heading {
-    font-size: 70px;
-    padding-bottom: 150px;
   }
 }
