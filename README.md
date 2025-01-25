@@ -4,7 +4,7 @@
 
 ## 🖼️ Image & GIF Sharing
 
-This project includes a section for sharing images and GIFs to enhance the user experience.
+![Açıklama](./img:gif/Zight%20Recording%202025-01-25%20at%2017.32.03.gif)
 
 ## ✨ Features
 
@@ -31,4 +31,3 @@ JavaScript: Dynamic functionality
 ## 👨‍💻 Developer
 
 This project was developed by mraliagaa@gmail.com . Your feedback and contributions are welcome!
-

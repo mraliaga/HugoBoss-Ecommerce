@@ -125,9 +125,10 @@ footer {
   flex-direction: column;
 }
 
-.footer-box h2 {
-  font-size: 128px;
-  color: var(--bg-color);
+.footer-box h2 img {
+  width: 70%;
+  border-radius: 10%;
+  box-shadow: rgba(237, 237, 237, 0.45);
 }
 
 .social {
@@ -136,21 +137,21 @@ footer {
   column-gap: 16px;
 }
 .social i {
-  background-color: var(--bg-color);
+  background-color: rgb(188, 33, 33);
   font-size: 20px;
   padding: 10px;
   color: var(--main-color);
   border-radius: 50%;
 }
 .footer-box h3 {
-  color: var(--bg-color);
+  color: rgb(188, 33, 33);
 }
 .footer-box a {
-  color: var(--bg-color);
+  color: rgb(188, 33, 33);
   padding-top: 30px;
 }
 .copyright {
-  color: var(--bg-color);
+  color: rgb(188, 33, 33);
   padding-top: 30px;
 }
 
@@ -176,7 +177,7 @@ footer {
 }
 .home-img img {
   width: 150%;
-  max-height: 730px;
+  max-height: 1730px;
 }
 .home-img::before {
   left: -150px; /* Yazıyı sola kaydırır. Değeri ihtiyacınıza göre ayarlayın */
